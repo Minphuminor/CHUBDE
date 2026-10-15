@@ -3,19 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <!-- ป้องกัน iOS แปลงเลขบัญชีเป็นลิงก์โทรศัพท์อัตโนมัติ -->
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="theme-color" content="#0B1B36" />
+  <meta name="theme-color" content="#FF921C" />
   <title>CHUBDE (ชับดี) | Smart Mobility สำหรับครอบครัวและสายท่องเที่ยว</title>
-  <meta name="description" content="เก้าอี้ไฟฟ้าสายเที่ยว น้ำหนักเบา พับไว พกขึ้นเครื่องบินได้ คืนอิสรภาพและความสุขให้ทุกทริปครอบครัว" />
+  <meta name="description" content="เก้าอี้ไฟฟ้าสายเที่ยว น้ำหนักเบา พับไว พกขึ้นเครื่องบินได้" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="CHUBDE (ชับดี) — Smart Mobility สำหรับครอบครัวและสายท่องเที่ยว" />
-  <meta property="og:description" content="เก้าอี้ไฟฟ้าสายเที่ยว น้ำหนักเบา พับไว พกขึ้นเครื่องบินได้ คืนอิสรภาพและความสุขให้ทุกทริปครอบครัว" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230B1B36'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-weight='700' font-size='34' text-anchor='middle' fill='%23DDBB72'%3EC%3C/text%3E%3C/svg%3E" />
+  <meta property="og:description" content="เก้าอี้ไฟฟ้าสายเที่ยว น้ำหนักเบา พับไว พกขึ้นเครื่องบินได้" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FF921C'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-weight='700' font-size='36' text-anchor='middle' fill='%231F1A15'%3EC%3C/text%3E%3C/svg%3E" />
+
+  <!--
+    ===================== ตั้งค่ารูปภาพ =====================
+    วางลิงก์แชร์ Google Drive ได้ทั้งลิงก์ (เช่น https://drive.google.com/file/d/xxxx/view?usp=sharing)
+    หรือใส่เฉพาะรหัสไฟล์ก็ได้ ระบบจะดึงรหัสไฟล์ออกมาแล้วแปลงเป็นลิงก์รูปภาพตรงให้เอง
+    * ทุกไฟล์ต้องตั้งค่าแชร์เป็น "ทุกคนที่มีลิงก์" (Anyone with the link)
+  -->
+  <script>
+    window.CHUBDE_CONFIG = {
+      // ลิงก์ไฟล์โลโก้ (1 ไฟล์)
+      logo: '',
+
+      // ภาพสเปก CHUBDE GO ใส่ทีละบรรทัด เรียงตามลำดับที่อยากให้แสดง
+      specImages: [
+        // 'https://drive.google.com/file/d/xxxxxxxx/view?usp=sharing',
+      ]
+    };
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@400;500;600;700&family=Prompt:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script>
@@ -23,517 +39,394 @@
       theme: {
         extend: {
           colors: {
-            ink: '#05070C',
-            navy: {
-              50: '#F3F6FB', 100: '#E4EAF4', 200: '#C7D3E6', 600: '#24467F',
-              700: '#1A3668', 800: '#112750', 900: '#0B1B36', 950: '#060E1E'
-            },
-            gold: { 200: '#F3E3BC', 300: '#EBD39B', 400: '#DDBB72', 500: '#C9A45C', 600: '#A9853F' },
-            line: { DEFAULT: '#06C755', dark: '#01A944' },
-            scb: { DEFAULT: '#4E2A82', dark: '#3A1D66', soft: '#F4EFFB' }
+            orange: { DEFAULT: '#FF921C', dark: '#B85C00', soft: '#FFE7C7', tint: '#FFF6EA' },
+            yellow: { DEFAULT: '#ECA427', soft: '#FCEBC5' },
+            ink: { DEFAULT: '#1F1A15', soft: '#4A433B', muted: '#6B6259', line: '#EADFD2' },
+            line: { DEFAULT: '#00A63E', dark: '#008C34' }
           },
-          fontFamily: {
-            display: ['Prompt', 'IBM Plex Sans Thai Looped', 'sans-serif'],
-            body: ['IBM Plex Sans Thai Looped', 'Prompt', 'sans-serif']
-          },
-          boxShadow: {
-            card: '0 1px 2px rgba(11,27,54,.06), 0 12px 32px -12px rgba(11,27,54,.22)'
-          }
+          fontFamily: { sans: ['Prompt', 'sans-serif'] }
         }
       }
     };
   </script>
 
   <style>
-    html { -webkit-text-size-adjust: 100%; }
-    body {
-      -webkit-tap-highlight-color: transparent;
-      background:
-        radial-gradient(60% 50% at 50% 0%, rgba(26,54,104,.55), transparent 70%),
-        #05070C;
-    }
-
-    .hero {
-      background:
-        radial-gradient(90% 55% at 50% 0%, rgba(221,187,114,.16), transparent 60%),
-        radial-gradient(120% 85% at 50% 0%, #1A3668 0%, #0B1B36 55%, #05070C 100%);
-      border-radius: 0 0 32px 32px;
-    }
-
-    /* โลโก้: วงแหวนทองรอบกรอบขาว */
-    .logo-ring {
-      background: conic-gradient(from 200deg, #F3E3BC, #C9A45C, #8E6B2E, #DDBB72, #F3E3BC);
-      box-shadow: 0 18px 40px -12px rgba(0,0,0,.6), 0 0 0 8px rgba(255,255,255,.04);
-    }
-    #brandLogo { transition: opacity .4s ease; }
-
-    /* ปุ่ม: เอฟเฟกต์ยุบนุ่มๆ + ระลอกคลื่นตอนแตะ */
-    .tap {
-      position: relative;
-      overflow: hidden;
-      isolation: isolate;
-      touch-action: manipulation;
-      -webkit-user-select: none;
-      user-select: none;
-      transition: transform .2s cubic-bezier(.2,.8,.2,1), box-shadow .2s ease, filter .2s ease;
-    }
-    .tap:active { transform: scale(.97); filter: brightness(.96); }
-    .tap:focus-visible { outline: 3px solid #DDBB72; outline-offset: 3px; }
-    @media (hover: hover) { .tap:hover { filter: brightness(1.06); transform: translateY(-1px); } }
-    .tap > * { position: relative; z-index: 1; }
-    .ripple {
-      position: absolute; z-index: 0; border-radius: 50%;
-      background: currentColor; opacity: .22; transform: scale(0);
-      pointer-events: none; animation: ripple .65s ease-out forwards;
-    }
-    @keyframes ripple { to { transform: scale(1); opacity: 0; } }
-
-    .btn-line {
-      background: linear-gradient(180deg, #06C755 0%, #01A944 100%);
-      box-shadow: 0 14px 30px -10px rgba(6,199,85,.65), inset 0 1px 0 rgba(255,255,255,.25);
-      text-shadow: 0 1px 2px rgba(0,0,0,.22);
-    }
-    .btn-line::after {
-      content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
-      background: linear-gradient(110deg, transparent 35%, rgba(255,255,255,.38) 50%, transparent 65%);
-      transform: translateX(-120%);
-      animation: shine 5s ease-in-out 1.6s infinite;
-    }
-    @keyframes shine { 0% { transform: translateX(-120%); } 28%, 100% { transform: translateX(120%); } }
-
-    .btn-call {
-      background: linear-gradient(180deg, #16305C 0%, #0B1B36 100%);
-      box-shadow: 0 14px 28px -12px rgba(11,27,54,.7), inset 0 0 0 1.5px rgba(221,187,114,.55);
-    }
-    .btn-dark {
-      background: linear-gradient(180deg, #13284D 0%, #05070C 100%);
-      box-shadow: 0 12px 24px -12px rgba(5,7,12,.7);
-    }
-    .btn-fb { background: linear-gradient(180deg, #2D86F5 0%, #1466D8 100%); box-shadow: 0 12px 24px -12px rgba(24,119,242,.7); }
-    .btn-tiktok {
-      background: #05070C;
-      box-shadow: -2px 0 0 #25F4EE, 2px 0 0 #FE2C55, 0 12px 24px -12px rgba(5,7,12,.7);
-    }
-    .btn-scb {
-      background: linear-gradient(180deg, #5C3497 0%, #3A1D66 100%);
-      box-shadow: 0 12px 24px -12px rgba(78,42,130,.75);
-    }
-
-    .go-outline {
-      font-family: 'Prompt', sans-serif; font-weight: 800; font-size: 168px; line-height: .8;
-      color: transparent; -webkit-text-stroke: 1.5px rgba(221,187,114,.22);
-      letter-spacing: -.04em;
-    }
-
-    .reveal { opacity: 0; transform: translateY(14px); animation: rise .7s cubic-bezier(.2,.8,.2,1) forwards; }
-    @keyframes rise { to { opacity: 1; transform: none; } }
-
-    .toast {
-      position: fixed; left: 50%; z-index: 60;
-      bottom: calc(24px + env(safe-area-inset-bottom));
-      transform: translate(-50%, 24px); opacity: 0; pointer-events: none;
-      transition: opacity .3s ease, transform .35s cubic-bezier(.2,.8,.2,1);
-    }
-    .toast.show { opacity: 1; transform: translate(-50%, 0); }
-
-    @media (prefers-reduced-motion: reduce) {
-      .reveal { animation: none; opacity: 1; transform: none; }
-      .btn-line::after { display: none; }
-      .tap, .toast { transition: none; }
-    }
+    body { background: #F3EADF; -webkit-tap-highlight-color: transparent; }
+    .btn { touch-action: manipulation; transition: transform .15s ease, background-color .15s ease, border-color .15s ease; }
+    .btn:active { transform: scale(.98); }
+    .btn:focus-visible, .slide:focus-visible, #specTrack:focus-visible { outline: 3px solid #1F1A15; outline-offset: 2px; }
+    .track { scrollbar-width: none; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+    .track::-webkit-scrollbar { display: none; }
+    .slide { aspect-ratio: var(--ratio, 4 / 5); }
+    @media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
   </style>
 </head>
 
-<body class="min-h-screen font-body text-navy-900 antialiased">
-  <main class="relative mx-auto min-h-screen w-full max-w-[480px] overflow-hidden bg-navy-50 shadow-[0_0_80px_rgba(0,0,0,.5)]">
+<body class="min-h-screen font-sans text-ink antialiased">
+  <main class="mx-auto min-h-screen w-full max-w-[480px] bg-white">
 
-    <!-- ============ 1. ส่วนหัวโปรไฟล์แบรนด์ ============ -->
-    <header class="hero relative px-5 pb-8 pt-10 text-center text-white">
-      <svg class="pointer-events-none absolute inset-0 h-full w-full opacity-30" viewBox="0 0 400 600" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M-20 470 C 70 400, 120 520, 210 450 S 330 330, 430 380" fill="none" stroke="#DDBB72" stroke-width="2" stroke-dasharray="1 9" stroke-linecap="round" vector-effect="non-scaling-stroke" />
-        <path d="M-20 120 C 60 160, 110 60, 200 95 S 340 170, 430 110" fill="none" stroke="#7F9CCB" stroke-width="1.5" stroke-dasharray="1 8" stroke-linecap="round" vector-effect="non-scaling-stroke" />
-      </svg>
-
-      <!-- โลโก้แบรนด์ -->
-      <div class="reveal relative mx-auto h-[132px] w-[132px] rounded-full p-[3px] logo-ring">
-        <div class="relative grid h-full w-full place-items-center overflow-hidden rounded-full bg-white">
-          <!--
-            วิธีใส่โลโก้: คัดลอก "รหัสไฟล์" จากลิงก์ Google Drive ของโลโก้มาใส่ใน data-drive-id
-            เช่น ลิงก์ https://drive.google.com/file/d/1AbCdEfGhIjK/view?usp=sharing  ->  รหัสไฟล์คือ 1AbCdEfGhIjK
-            (ไฟล์ต้องตั้งค่าแชร์เป็น "ทุกคนที่มีลิงก์")
-            ระบบจะโหลดจาก https://lh3.googleusercontent.com/d/[รหัสไฟล์] ก่อน
-            ถ้าไม่สำเร็จจะสลับไปที่ https://drive.google.com/uc?export=view&id=[รหัสไฟล์]
-            และถ้ายังไม่สำเร็จจะแสดงชื่อแบรนด์แทน
-          -->
-          <img id="brandLogo" data-drive-id="" alt="โลโก้ CHUBDE (ชับดี)"
-               class="absolute inset-0 h-full w-full object-contain p-2 opacity-0" style="display:none"
-               referrerpolicy="no-referrer" decoding="async" />
-          <div id="logoFallback" class="flex flex-col items-center leading-none" aria-hidden="true">
-            <span class="font-display text-[23px] font-extrabold tracking-[.06em] text-navy-900">CHUBDE</span>
-            <span class="mt-1.5 h-[2px] w-10 rounded-full bg-gold-500"></span>
-            <span class="mt-1.5 font-display text-[14px] font-semibold text-navy-700">ชับดี</span>
-          </div>
+    <!-- ส่วนหัว -->
+    <header class="bg-orange px-5 pb-6 pt-8 text-center">
+      <div class="relative mx-auto grid h-[104px] w-[104px] place-items-center overflow-hidden rounded-full bg-white">
+        <img id="brandLogo" alt="โลโก้ CHUBDE (ชับดี)" class="absolute inset-0 h-full w-full object-contain p-1.5"
+             style="display:none" referrerpolicy="no-referrer" decoding="async" />
+        <div id="logoFallback" class="leading-none" aria-hidden="true">
+          <span class="block text-[22px] font-bold tracking-wide">CHUBDE</span>
+          <span class="mt-1 block text-[14px] font-medium text-ink-soft">ชับดี</span>
         </div>
       </div>
 
-      <h1 class="reveal mt-6 font-display text-[40px] font-extrabold leading-none tracking-[.04em]" style="animation-delay:.06s">
-        CHUBDE <span class="block pt-2 text-[22px] font-semibold tracking-normal text-white/85">(ชับดี)</span>
+      <h1 class="mt-4 text-[34px] font-bold leading-tight tracking-wide">
+        CHUBDE <span class="text-[24px] font-semibold tracking-normal">(ชับดี)</span>
       </h1>
-
-      <p class="reveal mt-4 font-display text-[19px] font-semibold leading-snug text-gold-300" style="animation-delay:.12s">
+      <p class="mt-2 text-[18px] font-semibold leading-snug">
         <span class="whitespace-nowrap">Smart Mobility</span> <span class="whitespace-nowrap">สำหรับครอบครัวและสายท่องเที่ยว</span>
       </p>
-
-      <p class="reveal mx-auto mt-3 max-w-[22rem] text-[17px] leading-relaxed text-white/80" style="animation-delay:.18s">
-        เก้าอี้ไฟฟ้าสายเที่ยว น้ำหนักเบา พับไว พกขึ้นเครื่องบินได้ คืนอิสรภาพและความสุขให้ทุกทริปครอบครัว
+      <p class="mx-auto mt-2 max-w-[20rem] text-[16px] leading-relaxed text-ink-soft">
+        เก้าอี้ไฟฟ้าสายเที่ยว น้ำหนักเบา พับไว <span class="whitespace-nowrap">พกขึ้นเครื่องบินได้</span>
       </p>
-
-      <!-- ป้ายความน่าเชื่อถือ -->
-      <div class="reveal mt-6 rounded-2xl bg-white/[.07] px-4 py-4 text-left ring-1 ring-white/15 backdrop-blur" style="animation-delay:.24s">
-        <div class="flex items-start gap-3">
-          <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gold-400/15 text-gold-300">
-            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-          </span>
-          <div class="min-w-0">
-            <p class="text-[17px] font-semibold leading-snug">มีสินค้าพร้อมส่งในภาคใต้</p>
-            <ul class="mt-2 flex flex-wrap gap-1.5 text-[15px] font-medium" aria-label="จังหวัดที่มีสินค้าพร้อมส่ง">
-              <li class="rounded-full bg-white/10 px-3 py-1 ring-1 ring-white/15">พังงา</li>
-              <li class="rounded-full bg-white/10 px-3 py-1 ring-1 ring-white/15">ภูเก็ต</li>
-              <li class="rounded-full bg-white/10 px-3 py-1 ring-1 ring-white/15">กระบี่</li>
-              <li class="rounded-full bg-white/10 px-3 py-1 ring-1 ring-white/15">สุราษฎร์ธานี</li>
-            </ul>
-          </div>
-        </div>
-        <div class="my-3.5 h-px bg-white/10"></div>
-        <div class="flex items-center gap-3">
-          <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gold-400/15 text-gold-300">
-            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
-          </span>
-          <p class="text-[17px] font-semibold leading-snug">
-            บริการนำรถไปให้ทดลองขับถึงหน้าบ้าน
-            <span class="ml-1 inline-block rounded-md bg-gold-400 px-2 py-0.5 text-[15px] font-bold text-navy-900">ฟรี</span>
-          </p>
-        </div>
-      </div>
     </header>
 
-    <!-- ============ 2. ปุ่มทักแชต / โทรด่วน ============ -->
-    <section class="space-y-3.5 px-5 pt-7" aria-label="ติดต่อสอบถาม">
-      <a href="https://line.me/R/ti/p/@029iwjeg" target="_blank" rel="noopener"
-         class="tap btn-line reveal flex min-h-[84px] w-full items-center justify-center rounded-2xl px-5 py-4 text-center text-white"
-         style="animation-delay:.3s">
-        <span class="flex flex-col items-center">
-          <span class="text-[19px] font-bold leading-snug"><span class="whitespace-nowrap">💬 ทักแชต LINE OA สอบถาม /</span> <span class="whitespace-nowrap">นัดทดลองขับฟรี</span></span>
-          <span class="mt-1 rounded-full bg-white/20 px-3 py-0.5 text-[16px] font-semibold">(@029iwjeg)</span>
+    <!-- จุดเด่นบริการ -->
+    <ul class="divide-y divide-ink-line px-5 py-1">
+      <li class="flex items-center gap-4 py-3">
+        <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-orange-soft text-orange-dark">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 16 2 2 4-4"/><path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14"/><path d="m7.5 4.27 9 5.15"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" x2="12" y1="22" y2="12"/></svg>
         </span>
+        <p class="text-[17px] font-semibold">สินค้าพร้อมส่งทั่วประเทศ</p>
+      </li>
+      <li class="flex items-center gap-4 py-3">
+        <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-orange-soft text-orange-dark">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
+        </span>
+        <div>
+          <p class="text-[17px] font-semibold">จัดส่งภายใน 1 วัน</p>
+          <p class="text-[15px] text-ink-muted">สั่งตอนเช้า ตอนบ่ายได้สินค้าเลย</p>
+        </div>
+      </li>
+      <li class="flex items-center gap-4 py-3">
+        <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-orange-soft text-orange-dark">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        </span>
+        <div>
+          <p class="text-[17px] font-semibold">นำรถไปให้ทดลองขับถึงหน้าบ้าน ฟรี</p>
+          <p class="text-[15px] text-ink-muted">พังงา · ภูเก็ต · กระบี่ · สุราษฎร์ธานี</p>
+        </div>
+      </li>
+    </ul>
+
+    <!-- ติดต่อ -->
+    <section class="space-y-3 px-5 pb-2 pt-2" aria-label="ติดต่อสอบถาม">
+      <a href="https://line.me/R/ti/p/@029iwjeg" target="_blank" rel="noopener"
+         class="btn flex min-h-[68px] items-center gap-4 rounded-2xl bg-line px-5 py-3 text-white active:bg-line-dark">
+        <svg class="h-8 w-8 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+        <span class="flex-1 leading-tight">
+          <span class="block text-[19px] font-semibold">ทักแชต LINE</span>
+          <span class="mt-0.5 block text-[15px] text-white/90">สอบถาม · นัดทดลองขับฟรี</span>
+        </span>
+        <svg class="h-6 w-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
       </a>
 
       <a href="tel:0988818246"
-         class="tap btn-call reveal flex min-h-[80px] w-full items-center justify-center rounded-2xl px-5 py-4 text-center text-white"
-         style="animation-delay:.36s">
-        <span class="flex flex-col items-center">
-          <span class="text-[18px] font-semibold leading-snug">📞 โทรสายตรงปรึกษาสเปก:</span>
-          <span class="mt-0.5 font-display text-[26px] font-bold tracking-[.04em] text-gold-300">098-881-8246</span>
+         class="btn flex min-h-[68px] items-center gap-4 rounded-2xl bg-orange px-5 py-3 text-ink active:bg-[#F08410]">
+        <svg class="h-7 w-7 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="flex-1 leading-tight">
+          <span class="block text-[19px] font-semibold">โทร 098-881-8246</span>
+          <span class="mt-0.5 block text-[15px] text-ink-soft">สายตรง ปรึกษาสเปก</span>
         </span>
+        <svg class="h-6 w-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
       </a>
     </section>
 
-    <!-- ============ 3. สินค้าไฮไลต์ ============ -->
+    <!-- สินค้า -->
     <section class="px-5 pt-10" aria-labelledby="product-title">
-      <h2 class="mb-3.5 flex items-center gap-2.5 font-display text-[18px] font-semibold text-navy-700">
-        <span class="h-5 w-1.5 rounded-full bg-gold-500"></span>สินค้าไฮไลต์
-      </h2>
+      <span class="inline-block rounded-full bg-yellow-soft px-3 py-1 text-[14px] font-medium">รุ่นยอดนิยมสายท่องเที่ยว</span>
+      <h2 id="product-title" class="mt-2 text-[30px] font-bold leading-tight">CHUBDE GO</h2>
 
-      <article class="overflow-hidden rounded-[28px] bg-white shadow-card ring-1 ring-navy-100">
-        <div class="relative overflow-hidden bg-navy-900 px-5 pb-6 pt-5 text-white">
-          <span class="go-outline pointer-events-none absolute -right-3 -top-2" aria-hidden="true">GO</span>
-          <span class="relative inline-flex items-center gap-1.5 rounded-full bg-gold-400 px-3 py-1 text-[15px] font-bold text-navy-900">
-            ★ รุ่นยอดนิยมสายท่องเที่ยว
-          </span>
-          <h3 id="product-title" class="relative mt-3 font-display text-[36px] font-extrabold leading-none tracking-[.02em]">
-            CHUBDE <span class="text-gold-400">GO</span>
-          </h3>
-
-          <div class="relative mt-5 grid grid-cols-3 gap-2 text-center">
-            <div class="rounded-2xl bg-white/[.08] px-2 py-3 ring-1 ring-white/10">
-              <p class="font-display text-[22px] font-bold leading-none text-gold-300">1-3<span class="ml-0.5 text-[14px]">วิ</span></p>
-              <p class="mt-1.5 text-[14px] leading-tight text-white/80">พับเก็บไว</p>
-            </div>
-            <div class="rounded-2xl bg-white/[.08] px-2 py-3 ring-1 ring-white/10">
-              <svg class="mx-auto h-[22px] w-[22px] text-gold-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
-              <p class="mt-1.5 text-[14px] leading-tight text-white/80">ขึ้นเครื่องได้</p>
-            </div>
-            <div class="rounded-2xl bg-white/[.08] px-2 py-3 ring-1 ring-white/10">
-              <p class="font-display text-[22px] font-bold leading-none text-gold-300">3<span class="ml-0.5 text-[14px]">ปี</span></p>
-              <p class="mt-1.5 text-[14px] leading-tight text-white/80">ประกันโครงสร้าง</p>
-            </div>
+      <div id="specGallery" class="mt-4" style="display:none">
+        <div id="specTrack" class="track -mx-5 flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-px-5 px-5"
+             tabindex="0" aria-label="ภาพสเปก CHUBDE GO เลื่อนซ้ายขวาเพื่อดูภาพถัดไป"></div>
+        <div class="mt-3 flex items-center justify-between gap-3">
+          <button id="specPrev" type="button" aria-label="ภาพก่อนหน้า"
+                  class="btn grid h-12 w-12 shrink-0 place-items-center rounded-full border-2 border-ink-line text-ink disabled:opacity-30">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <div class="text-center leading-tight">
+            <p id="specCount" class="text-[17px] font-semibold" aria-live="polite"></p>
+            <p class="mt-0.5 text-[14px] text-ink-muted">เลื่อนดูภาพ · แตะที่ภาพเพื่อขยาย</p>
           </div>
+          <button id="specNext" type="button" aria-label="ภาพถัดไป"
+                  class="btn grid h-12 w-12 shrink-0 place-items-center rounded-full border-2 border-ink-line text-ink disabled:opacity-30">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
         </div>
+      </div>
 
-        <ul class="divide-y divide-navy-100 px-5">
-          <li class="flex gap-4 py-4">
-            <span class="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-navy-900 text-gold-300">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.67 19a2 2 0 0 0 1.416-.588l6.154-6.172a6 6 0 0 0-8.49-8.49L5.586 9.914A2 2 0 0 0 5 11.328V18a1 1 0 0 0 1 1z"/><path d="M16 8 2 22"/><path d="M17.5 15H9"/></svg>
-            </span>
-            <div>
-              <p class="text-[17px] font-bold leading-snug text-navy-900">น้ำหนักเบาพิเศษ พับเก็บไวใน <span class="whitespace-nowrap">1-3 วินาที</span></p>
-              <p class="mt-1 text-[16px] leading-relaxed text-navy-700/80">ยกมือเดียวใส่ท้ายรถเก๋งได้สบาย</p>
-            </div>
-          </li>
-          <li class="flex gap-4 py-4">
-            <span class="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-navy-900 text-gold-300">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 7h1a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2"/><path d="M6 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h1"/><path d="m11 7-3 5h4l-3 5"/><line x1="22" x2="22" y1="11" y2="13"/></svg>
-            </span>
-            <div>
-              <p class="text-[17px] font-bold leading-snug text-navy-900">แบตเตอรี่ลิเธียม <span class="whitespace-nowrap">Quick-Release</span></p>
-              <p class="mt-1 text-[16px] leading-relaxed text-navy-700/80">ถอดแยกถือขึ้นเครื่องบินได้ตามมาตรฐานสากล</p>
-            </div>
-          </li>
-          <li class="flex gap-4 py-4">
-            <span class="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-navy-900 text-gold-300">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15-4-4 6.75-6.77a7.79 7.79 0 0 1 11 11L13 22l-4-4 6.39-6.36a2.14 2.14 0 0 0-3-3L6 15"/><path d="m5 8 4 4"/><path d="m12 15 4 4"/></svg>
-            </span>
-            <div>
-              <p class="text-[17px] font-bold leading-snug text-navy-900">ระบบเบรกแม่เหล็กไฟฟ้า</p>
-              <p class="mt-1 text-[16px] leading-relaxed text-navy-700/80">ปล่อยมือแล้วหยุดนิ่งทันที ปลอดภัยบนทางลาด</p>
-            </div>
-          </li>
-          <li class="flex gap-4 py-4">
-            <span class="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-navy-900 text-gold-300">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 17a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2Z"/><path d="M6 15v-2"/><path d="M12 15V9"/><circle cx="12" cy="6" r="3"/></svg>
-            </span>
-            <div>
-              <p class="text-[17px] font-bold leading-snug text-navy-900">ทุกคันผ่านการเสียบสายคอมพิวเตอร์ Calibrate</p>
-              <p class="mt-1 text-[16px] leading-relaxed text-navy-700/80">ปรับจูนความนุ่มนวลของจอยสติ๊กก่อนส่งมอบ</p>
-            </div>
-          </li>
-          <li class="flex gap-4 py-4">
-            <span class="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-navy-900 text-gold-300">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
-            </span>
-            <div>
-              <p class="text-[17px] font-bold leading-snug text-navy-900">รับประกันโครงสร้าง 3 ปี</p>
-              <p class="mt-1 text-[16px] leading-relaxed text-navy-700/80">มอเตอร์และแบตเตอรี่ 1 ปีเต็ม</p>
-            </div>
-          </li>
-        </ul>
-
-        <div class="px-5 pb-5 pt-1">
-          <a href="https://drive.google.com/drive/folders/1maZ_Gy3WLGrcvuf9ZBaXjTN8hdu2h5cX" target="_blank" rel="noopener"
-             class="tap btn-dark flex min-h-[72px] w-full items-center gap-3 rounded-2xl px-5 py-4 text-white">
-            <span class="flex-1 text-[17px] font-semibold leading-snug">📸 คลิกดูภาพและวิดีโอ CHUBDE GO คันจริงทั้งหมด</span>
-            <svg class="h-6 w-6 shrink-0 text-gold-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
-          </a>
-        </div>
-      </article>
+      <ul class="mt-5 space-y-3 text-[17px] leading-snug">
+        <li class="flex gap-3"><svg class="mt-0.5 h-6 w-6 shrink-0 text-orange-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>เบา พับเก็บใน <span class="whitespace-nowrap">1-3 วินาที</span> ยกใส่ท้ายรถเก๋งได้</span></li>
+        <li class="flex gap-3"><svg class="mt-0.5 h-6 w-6 shrink-0 text-orange-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>แบตลิเธียมถอดแยกได้ ถือขึ้นเครื่องบินได้</span></li>
+        <li class="flex gap-3"><svg class="mt-0.5 h-6 w-6 shrink-0 text-orange-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>เบรกแม่เหล็กไฟฟ้า ปล่อยมือหยุดทันที</span></li>
+        <li class="flex gap-3"><svg class="mt-0.5 h-6 w-6 shrink-0 text-orange-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>ทุกคันจูนจอยสติ๊กด้วยคอมพิวเตอร์ <span class="whitespace-nowrap">ก่อนส่งมอบ</span></span></li>
+        <li class="flex gap-3"><svg class="mt-0.5 h-6 w-6 shrink-0 text-orange-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>ประกันโครงสร้าง 3 ปี มอเตอร์และแบต 1 ปี</span></li>
+      </ul>
     </section>
 
-    <!-- ============ 4. โซเชียลมีเดียทางการ ============ -->
+    <!-- สั่งซื้อ -->
+    <section class="mx-5 mt-10 rounded-2xl bg-orange-tint px-5 py-6 text-center" aria-labelledby="order-title">
+      <h2 id="order-title" class="text-[22px] font-bold">สั่งซื้อ / สอบถามราคา</h2>
+      <p class="mt-1 text-[16px] text-ink-soft">ทักแชตกับทีมงานทาง LINE ได้เลย</p>
+      <a href="https://line.me/R/ti/p/@029iwjeg" target="_blank" rel="noopener"
+         class="btn mt-4 flex min-h-[64px] items-center justify-center gap-3 rounded-2xl bg-line px-5 py-3 text-white active:bg-line-dark">
+        <svg class="h-7 w-7 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+        <span class="text-[19px] font-semibold">ทักแชต LINE สั่งซื้อ</span>
+      </a>
+    </section>
+
+    <!-- โซเชียล -->
     <section class="px-5 pt-10" aria-labelledby="social-title">
-      <h2 id="social-title" class="mb-3.5 flex items-center gap-2.5 font-display text-[18px] font-semibold text-navy-700">
-        <span class="h-5 w-1.5 rounded-full bg-gold-500"></span>ช่องทางโซเชียลมีเดียทางการ
-      </h2>
-      <div class="space-y-3.5">
+      <h2 id="social-title" class="text-[20px] font-bold">ติดตาม CHUBDE</h2>
+      <div class="mt-3 space-y-3">
         <a href="https://www.facebook.com/share/1KFYao7dGH/" target="_blank" rel="noopener"
-           class="tap btn-fb flex min-h-[72px] w-full items-center gap-3 rounded-2xl px-5 py-4 text-white">
-          <span class="flex-1 text-[17px] font-semibold leading-snug">📘 ติดตามเพจ Facebook: CHUBDE</span>
-          <svg class="h-6 w-6 shrink-0 opacity-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+           class="btn flex min-h-[64px] items-center gap-4 rounded-2xl border-2 border-ink-line px-5 py-3 active:bg-orange-tint">
+          <svg class="h-8 w-8 shrink-0 text-[#1877F2]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+          <span class="flex-1 leading-tight">
+            <span class="block text-[18px] font-semibold">Facebook</span>
+            <span class="mt-0.5 block text-[15px] text-ink-muted">เพจ CHUBDE</span>
+          </span>
+          <svg class="h-6 w-6 shrink-0 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
         </a>
         <a href="https://www.tiktok.com/@chubdee" target="_blank" rel="noopener"
-           class="tap btn-tiktok flex min-h-[72px] w-full items-center gap-3 rounded-2xl px-5 py-4 text-white">
-          <span class="flex-1 text-[17px] font-semibold leading-snug">🎵 ชมคลิปสาธิตการใช้งานบน TikTok (@chubdee)</span>
-          <svg class="h-6 w-6 shrink-0 opacity-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+           class="btn flex min-h-[64px] items-center gap-4 rounded-2xl border-2 border-ink-line px-5 py-3 active:bg-orange-tint">
+          <svg class="h-7 w-8 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          <span class="flex-1 leading-tight">
+            <span class="block text-[18px] font-semibold">TikTok</span>
+            <span class="mt-0.5 block text-[15px] text-ink-muted">@chubdee · คลิปสาธิตการใช้งาน</span>
+          </span>
+          <svg class="h-6 w-6 shrink-0 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
         </a>
       </div>
     </section>
 
-    <!-- ============ 5. ข้อมูลการชำระเงิน ============ -->
-    <section class="px-5 pt-10" aria-labelledby="payment-title">
-      <h2 id="payment-title" class="mb-3.5 flex items-center gap-2.5 font-display text-[18px] font-semibold text-navy-700">
-        <span class="h-5 w-1.5 rounded-full bg-gold-500"></span>ข้อมูลการชำระเงินอย่างเป็นทางการ
-      </h2>
-
-      <article class="overflow-hidden rounded-[28px] bg-white shadow-card ring-1 ring-navy-100">
-        <div class="flex items-center gap-3.5 bg-gradient-to-br from-scb to-scb-dark px-5 py-4 text-white">
-          <div class="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-white shadow-md" aria-hidden="true">
-            <span class="font-display text-[19px] font-extrabold tracking-[.02em] text-scb">SCB</span>
-          </div>
-          <div class="min-w-0 flex-1">
-            <p class="text-[18px] font-bold leading-snug">ธนาคารไทยพาณิชย์ (SCB)</p>
-            <p class="text-[14px] text-white/75">Siam Commercial Bank</p>
-          </div>
-        </div>
-
-        <dl class="space-y-4 px-5 pb-2 pt-5">
-          <div>
-            <dt class="text-[15px] font-medium text-navy-700/70">เลขที่บัญชี</dt>
-            <dd id="accountNo" class="mt-1 select-all font-display text-[32px] font-bold leading-none tracking-[.05em] text-scb">408-195152-9</dd>
-          </div>
-          <div class="h-px bg-navy-100"></div>
-          <div>
-            <dt class="text-[15px] font-medium text-navy-700/70">ชื่อบัญชี (ภาษาไทย)</dt>
-            <dd class="mt-1 text-[20px] font-bold text-navy-900">นาย ภูมินทร์ จีวะรัตน์</dd>
-          </div>
-          <div>
-            <dt class="text-[15px] font-medium text-navy-700/70">ชื่อบัญชี (ภาษาอังกฤษ)</dt>
-            <dd class="mt-1 text-[20px] font-bold tracking-[.03em] text-navy-900">PHUMIN JEEWARAT</dd>
-          </div>
-        </dl>
-
-        <div class="px-5 pb-5 pt-4">
-          <button id="copyBtn" type="button"
-                  class="tap btn-scb flex min-h-[68px] w-full items-center justify-center rounded-2xl px-5 py-4 text-white">
-            <span id="copyLabel" class="text-[18px] font-bold">📋 คัดลอกเลขบัญชี</span>
-          </button>
-          <p class="mt-3.5 flex items-start gap-2 rounded-xl bg-scb-soft px-3.5 py-3 text-[15px] leading-relaxed text-scb-dark">
-            <svg class="mt-0.5 h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            กรุณาตรวจสอบชื่อบัญชีให้ตรงกันทุกครั้งก่อนโอนเงิน
-          </p>
-        </div>
-      </article>
-    </section>
-
-    <footer class="px-5 pt-12 text-center" style="padding-bottom: calc(2.5rem + env(safe-area-inset-bottom));">
-      <p class="font-display text-[18px] font-bold tracking-[.04em] text-navy-900">CHUBDE <span class="font-semibold tracking-normal text-navy-700">(ชับดี)</span></p>
-      <p class="mt-1 text-[15px] text-navy-700/75">Smart Mobility สำหรับครอบครัวและสายท่องเที่ยว</p>
-      <p class="mt-3 text-[13px] text-navy-700/55">© <span id="year">2026</span> CHUBDE. All rights reserved.</p>
+    <footer class="px-5 pt-12 text-center text-[14px] text-ink-muted" style="padding-bottom: calc(2.5rem + env(safe-area-inset-bottom));">
+      © <span id="year">2026</span> CHUBDE (ชับดี)
     </footer>
   </main>
 
-  <!-- แจ้งเตือนแบบ Toast -->
-  <div id="toast" role="status" aria-live="polite"
-       class="toast flex w-max max-w-[calc(100%-32px)] items-center gap-2.5 rounded-full bg-navy-900 px-5 py-3.5 text-[16px] font-semibold text-white shadow-2xl ring-1 ring-white/10">
-    <span id="toastIcon" class="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-line text-white">
-      <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-    </span>
-    <span id="toastText"></span>
+  <!-- ดูภาพขนาดใหญ่ -->
+  <div id="viewer" class="fixed inset-0 z-50 flex-col bg-black text-white" style="display:none"
+       role="dialog" aria-modal="true" aria-label="ภาพสเปก CHUBDE GO">
+    <div class="flex items-center justify-between px-4 pb-2" style="padding-top: calc(.75rem + env(safe-area-inset-top));">
+      <p id="viewerCount" class="text-[17px] font-semibold"></p>
+      <button id="viewerClose" type="button"
+              class="btn flex h-12 items-center gap-2 rounded-full bg-white/15 px-5 text-[17px] font-semibold">
+        ปิด
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+    <div id="viewerTrack" class="track flex min-h-0 flex-1 snap-x snap-mandatory overflow-x-auto"></div>
+    <p class="px-4 pt-2 text-center text-[14px] text-white/70" style="padding-bottom: calc(.75rem + env(safe-area-inset-bottom));">
+      ปัดซ้าย-ขวาเพื่อดูภาพถัดไป
+    </p>
   </div>
 
   <script>
     (function () {
-      var ACCOUNT_NO = '4081951529';
-      var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var config = window.CHUBDE_CONFIG || {};
 
-      /* ---------- โลโก้จาก Google Drive ---------- */
-      // รับได้ทั้งรหัสไฟล์ล้วน หรือเผลอวางลิงก์เต็ม (/file/d/ID/view หรือ ?id=ID) ก็จะดึงเฉพาะรหัสไฟล์ออกมา
-      function extractDriveId(value) {
-        value = (value || '').trim();
-        if (!value) return '';
+      // รับได้ทั้งรหัสไฟล์ หรือลิงก์เต็ม (/file/d/ID/view, ?id=ID) แล้วคืนเฉพาะรหัสไฟล์
+      function driveId(value) {
+        value = String(value || '').trim();
         var m = value.match(/\/d\/([\w-]{10,})/) || value.match(/[?&]id=([\w-]{10,})/);
         if (m) return m[1];
         return /^[\w-]{10,}$/.test(value) ? value : '';
       }
 
-      (function initLogo() {
-        var img = document.getElementById('brandLogo');
-        var fallback = document.getElementById('logoFallback');
-        var id = extractDriveId(img.getAttribute('data-drive-id'));
-        if (!id) return; // ยังไม่ได้ใส่รหัสไฟล์ -> แสดงชื่อแบรนด์แทน
-
-        var sources = [
-          'https://lh3.googleusercontent.com/d/' + id,
-          'https://drive.google.com/uc?export=view&id=' + id
-        ];
-        var attempt = 0;
-
-        img.onload = function () {
-          img.style.display = 'block';
-          requestAnimationFrame(function () { img.classList.remove('opacity-0'); });
-          fallback.style.display = 'none';
-        };
+      // ลองโหลดทีละลิงก์ ถ้าลิงก์แรกไม่ขึ้นจะสลับไปลิงก์ถัดไป
+      function loadImage(img, sources, onOk, onFail) {
+        var i = 0;
+        img.onload = function () { img.onload = img.onerror = null; if (onOk) onOk(img); };
         img.onerror = function () {
-          attempt += 1;
-          if (attempt < sources.length) {
-            img.src = sources[attempt];
-          } else {
-            img.onerror = null;
-            img.style.display = 'none';
-            fallback.style.display = '';
-          }
+          i += 1;
+          if (i < sources.length) { img.src = sources[i]; return; }
+          img.onload = img.onerror = null;
+          if (onFail) onFail(img);
         };
         img.src = sources[0];
-      })();
+      }
 
-      /* ---------- เอฟเฟกต์ระลอกคลื่นเวลาแตะปุ่ม ---------- */
-      if (!reduceMotion) {
-        document.querySelectorAll('.tap').forEach(function (el) {
-          el.addEventListener('pointerdown', function (e) {
-            var r = el.getBoundingClientRect();
-            var size = Math.max(r.width, r.height) * 2;
-            var dot = document.createElement('span');
-            dot.className = 'ripple';
-            dot.style.width = dot.style.height = size + 'px';
-            dot.style.left = (e.clientX - r.left - size / 2) + 'px';
-            dot.style.top = (e.clientY - r.top - size / 2) + 'px';
-            el.appendChild(dot);
-            dot.addEventListener('animationend', function () { dot.remove(); });
-          });
+      /* ---------- โลโก้ ---------- */
+      var logoId = driveId(config.logo);
+      if (logoId) {
+        var logo = document.getElementById('brandLogo');
+        var fallback = document.getElementById('logoFallback');
+        loadImage(logo, [
+          'https://lh3.googleusercontent.com/d/' + logoId,
+          'https://drive.google.com/uc?export=view&id=' + logoId
+        ], function () {
+          logo.style.display = 'block';
+          fallback.style.display = 'none';
         });
       }
 
-      /* ---------- Toast ---------- */
-      var toast = document.getElementById('toast');
-      var toastText = document.getElementById('toastText');
-      var toastIcon = document.getElementById('toastIcon');
-      var toastTimer;
-      function showToast(message, ok) {
-        toastText.textContent = message;
-        toastIcon.style.display = ok ? '' : 'none';
-        toast.classList.add('show');
-        clearTimeout(toastTimer);
-        toastTimer = setTimeout(function () { toast.classList.remove('show'); }, ok ? 2600 : 4200);
+      /* ---------- ภาพสเปก ---------- */
+      var ids = (config.specImages || []).map(driveId).filter(Boolean);
+      var gallery = document.getElementById('specGallery');
+      var track = document.getElementById('specTrack');
+      var count = document.getElementById('specCount');
+      var prev = document.getElementById('specPrev');
+      var next = document.getElementById('specNext');
+      var viewer = document.getElementById('viewer');
+      var viewerTrack = document.getElementById('viewerTrack');
+      var viewerCount = document.getElementById('viewerCount');
+      var viewerClose = document.getElementById('viewerClose');
+      var ratioSet = false;
+      var current = 0;
+      var viewerOpen = false;
+      var lastFocus = null;
+
+      function slides() { return Array.prototype.slice.call(track.children); }
+
+      function refresh() {
+        var list = slides();
+        if (!list.length) { gallery.style.display = 'none'; return; }
+        gallery.style.display = '';
+        var single = list.length === 1;
+        list.forEach(function (s, i) {
+          s.style.width = single ? '100%' : '86%';
+          s.setAttribute('aria-label', 'ขยายภาพสเปกที่ ' + (i + 1) + ' จาก ' + list.length);
+        });
+        prev.style.visibility = next.style.visibility = single ? 'hidden' : '';
+        setCurrent(Math.min(current, list.length - 1));
       }
 
-      /* ---------- คัดลอกเลขบัญชี ---------- */
-      function legacyCopy(text) {
-        // สำรองสำหรับเบราว์เซอร์ในแอป (TikTok / LINE / Facebook) ที่ไม่รองรับ Clipboard API
-        var span = document.createElement('span');
-        span.textContent = text;
-        span.style.cssText = 'position:fixed;top:0;left:0;white-space:pre;opacity:0;-webkit-user-select:text;user-select:text;';
-        document.body.appendChild(span);
-        var range = document.createRange();
-        range.selectNodeContents(span);
-        var sel = window.getSelection();
-        sel.removeAllRanges();
-        sel.addRange(range);
-        var ok = false;
-        try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
-        sel.removeAllRanges();
-        span.remove();
-        return ok;
+      function setCurrent(i) {
+        var total = slides().length;
+        current = i;
+        count.textContent = 'ภาพ ' + (i + 1) + ' / ' + total;
+        prev.disabled = i === 0;
+        next.disabled = i === total - 1;
       }
 
-      function copyText(text) {
-        if (navigator.clipboard && window.isSecureContext) {
-          return navigator.clipboard.writeText(text).then(
-            function () { return true; },
-            function () { return legacyCopy(text); }
-          );
-        }
-        return Promise.resolve(legacyCopy(text));
+      function scrollToSlide(i) {
+        var list = slides();
+        if (!list[i]) return;
+        track.scrollTo({ left: list[i].offsetLeft - list[0].offsetLeft, behavior: 'smooth' });
       }
 
-      var copyBtn = document.getElementById('copyBtn');
-      var copyLabel = document.getElementById('copyLabel');
-      var labelTimer;
-      copyBtn.addEventListener('click', function () {
-        copyText(ACCOUNT_NO).then(function (ok) {
-          if (ok) {
-            showToast('คัดลอกเลขบัญชีเรียบร้อยแล้ว', true);
-            copyLabel.textContent = '✅ คัดลอกแล้ว: ' + ACCOUNT_NO;
-            if (navigator.vibrate) navigator.vibrate(30);
-            clearTimeout(labelTimer);
-            labelTimer = setTimeout(function () { copyLabel.textContent = '📋 คัดลอกเลขบัญชี'; }, 2600);
-          } else {
-            var accountEl = document.getElementById('accountNo');
-            var range = document.createRange();
-            range.selectNodeContents(accountEl);
-            var sel = window.getSelection();
-            sel.removeAllRanges();
-            sel.addRange(range);
-            showToast('คัดลอกอัตโนมัติไม่ได้ กรุณากดค้างที่เลขบัญชีเพื่อคัดลอก', false);
+      function nearestIndex() {
+        var list = slides();
+        if (track.scrollLeft >= track.scrollWidth - track.clientWidth - 2) return list.length - 1;
+        var best = 0, bestDist = Infinity;
+        list.forEach(function (s, i) {
+          var d = Math.abs(s.offsetLeft - list[0].offsetLeft - track.scrollLeft);
+          if (d < bestDist) { bestDist = d; best = i; }
+        });
+        return best;
+      }
+
+      var ticking = false;
+      track.addEventListener('scroll', function () {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(function () { ticking = false; setCurrent(nearestIndex()); });
+      }, { passive: true });
+
+      prev.addEventListener('click', function () { scrollToSlide(Math.max(current - 1, 0)); });
+      next.addEventListener('click', function () { scrollToSlide(Math.min(current + 1, slides().length - 1)); });
+      track.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight') { e.preventDefault(); next.click(); }
+        if (e.key === 'ArrowLeft') { e.preventDefault(); prev.click(); }
+      });
+
+      ids.forEach(function (id) {
+        var slide = document.createElement('button');
+        slide.type = 'button';
+        slide.className = 'slide relative shrink-0 snap-start overflow-hidden rounded-2xl bg-orange-tint';
+        var img = document.createElement('img');
+        img.alt = 'ภาพสเปก CHUBDE GO';
+        img.className = 'h-full w-full object-contain';
+        img.decoding = 'async';
+        img.referrerPolicy = 'no-referrer';
+        if (track.children.length) img.loading = 'lazy';
+        slide.appendChild(img);
+        track.appendChild(slide);
+
+        loadImage(img, [
+          'https://lh3.googleusercontent.com/d/' + id + '=w1600',
+          'https://lh3.googleusercontent.com/d/' + id,
+          'https://drive.google.com/uc?export=view&id=' + id
+        ], function () {
+          // ใช้สัดส่วนของภาพแรกที่โหลดได้ เพื่อให้ทุกภาพในแถบสูงเท่ากัน
+          if (!ratioSet && img.naturalWidth && img.naturalHeight) {
+            ratioSet = true;
+            track.style.setProperty('--ratio', img.naturalWidth + ' / ' + img.naturalHeight);
           }
+        }, function () {
+          slide.remove();
+          refresh();
         });
+
+        slide.addEventListener('click', function () { openViewer(slides().indexOf(slide)); });
+      });
+      refresh();
+
+      /* ---------- ดูภาพขนาดใหญ่ ---------- */
+      function setViewerCount() {
+        var total = viewerTrack.children.length;
+        var i = Math.round(viewerTrack.scrollLeft / Math.max(viewerTrack.clientWidth, 1));
+        viewerCount.textContent = 'ภาพ ' + (Math.min(i, total - 1) + 1) + ' / ' + total;
+      }
+
+      function openViewer(index) {
+        var list = slides();
+        if (index < 0 || !list.length) return;
+        viewerTrack.innerHTML = '';
+        list.forEach(function (s) {
+          var src = s.querySelector('img').currentSrc || s.querySelector('img').src;
+          var wrap = document.createElement('div');
+          wrap.className = 'flex h-full w-full shrink-0 snap-center items-center justify-center p-2';
+          var big = document.createElement('img');
+          big.src = src;
+          big.alt = 'ภาพสเปก CHUBDE GO';
+          big.referrerPolicy = 'no-referrer';
+          big.className = 'max-h-full max-w-full object-contain';
+          wrap.appendChild(big);
+          viewerTrack.appendChild(wrap);
+        });
+        lastFocus = document.activeElement;
+        viewer.style.display = 'flex';
+        document.documentElement.style.overflow = 'hidden';
+        viewerTrack.scrollLeft = index * viewerTrack.clientWidth;
+        setViewerCount();
+        viewerOpen = true;
+        viewerClose.focus();
+        // ให้ปุ่มย้อนกลับของมือถือปิดหน้าดูภาพ แทนการออกจากเว็บ
+        try { history.pushState({ chubdeViewer: true }, ''); } catch (e) {}
+      }
+
+      function hideViewer() {
+        if (!viewerOpen) return;
+        viewerOpen = false;
+        viewer.style.display = 'none';
+        document.documentElement.style.overflow = '';
+        if (lastFocus && lastFocus.focus) lastFocus.focus();
+      }
+
+      function closeViewer() {
+        if (history.state && history.state.chubdeViewer) history.back();
+        else hideViewer();
+      }
+
+      viewerTrack.addEventListener('scroll', function () {
+        requestAnimationFrame(setViewerCount);
+      }, { passive: true });
+      viewerClose.addEventListener('click', closeViewer);
+      window.addEventListener('popstate', hideViewer);
+      document.addEventListener('keydown', function (e) {
+        if (!viewerOpen) return;
+        if (e.key === 'Escape') closeViewer();
+        if (e.key === 'ArrowRight') viewerTrack.scrollBy({ left: viewerTrack.clientWidth, behavior: 'smooth' });
+        if (e.key === 'ArrowLeft') viewerTrack.scrollBy({ left: -viewerTrack.clientWidth, behavior: 'smooth' });
       });
 
       document.getElementById('year').textContent = new Date().getFullYear();
