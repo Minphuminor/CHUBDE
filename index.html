@@ -25,8 +25,15 @@
       logo: '1qcWUbzuby5NwDFvv7sfR7EkZpEIIrkOU',
 
       // ภาพสเปก CHUBDE GO ใส่ทีละบรรทัด เรียงตามลำดับที่อยากให้แสดง
+      // จากโฟลเดอร์ Chubde_web/Chubde_GO_218 (1.jpg – 7.jpg)
       specImages: [
-        // 'https://drive.google.com/file/d/xxxxxxxx/view?usp=sharing',
+        '1VBbFG9oJ63_it3TYKKKqrI5DDtqMyS8l', // 1 ภาพรวมสเปก
+        '1ImMuCXvMfm3yXrvrOTVgEus1ea_Q8ozH', // 2 มอเตอร์คู่ 400W
+        '1_Pw77PYwA8YXTwmDFhxx0vwW8_V4SRNn', // 3 จอยสติ๊ก 360°
+        '1uJn_g80CpENLw5omXuEv-jRTQcX4Naiu', // 4 เบรกอัตโนมัติ
+        '1fSw_Hh9_DXr6ATNOA4JxRl0vtF0JWcbS', // 5 พับง่าย ขึ้นเครื่องบิน
+        '1EwhaEZIuKdaydto4-OsBWCgEU2sB6i9a', // 6 ปรับได้ทั้งซ้าย-ขวา
+        '1caV1ISzCdjxK9Vv-sS6Vp7-6KEeQ3YbA'  // 7 ขนาดและสเปกทางการ
       ]
     };
   </script>
@@ -72,12 +79,13 @@
 
     <!-- ส่วนหัว -->
     <header class="px-5 pb-5 pt-6 text-center">
-      <div id="logoWrap" class="mb-3 inline-flex rounded-2xl bg-white p-2" style="visibility:hidden;height:7rem">
-        <img id="brandLogo" alt="โลโก้ CHUBDE (ชับดี)" class="h-24 w-auto max-w-[260px] object-contain"
-             referrerpolicy="no-referrer" decoding="async" />
+      <!-- ไฟล์โลโก้มีพื้นที่ว่างรอบตัวอักษรเยอะ จึงขยายแล้วครอปให้เหลือเฉพาะโลโก้ -->
+      <div id="logoWrap" class="relative mx-auto overflow-hidden" style="visibility:hidden;width:232px;height:104px">
+        <img id="brandLogo" alt="โลโก้ CHUBDE (ชับดี)" class="absolute max-w-none"
+             style="width:443px;left:-105px;top:-141px" referrerpolicy="no-referrer" decoding="async" />
       </div>
-      <h1 class="font-serif text-[40px] font-semibold leading-tight tracking-wide">
-        CHUBDE <span class="font-sans text-[22px] font-medium tracking-normal">(ชับดี)</span>
+      <h1 class="flex min-h-[50px] items-baseline justify-center gap-2 leading-tight">
+        <span id="brandLatin" class="font-serif text-[40px] font-semibold tracking-wide">CHUBDE</span><span id="brandThai" class="text-[22px] font-medium">(ชับดี)</span>
       </h1>
       <p class="mt-2 text-[18px] font-medium leading-snug">
         <span class="whitespace-nowrap">Smart Mobility</span> <span class="whitespace-nowrap">สำหรับครอบครัวและสายท่องเที่ยว</span>
@@ -262,7 +270,14 @@
         loadImage(document.getElementById('brandLogo'), [
           'https://lh3.googleusercontent.com/d/' + logoId,
           'https://drive.google.com/uc?export=view&id=' + logoId
-        ], function () { logoWrap.style.visibility = 'visible'; }, hideLogo);
+        ], function () {
+          // โลโก้มีคำว่า CHUBDE อยู่แล้ว ใต้โลโก้จึงเหลือแค่ชื่อไทย (ชื่ออังกฤษยังอยู่ให้โปรแกรมอ่านหน้าจอ)
+          logoWrap.style.visibility = 'visible';
+          document.getElementById('brandLatin').className = 'sr-only';
+          var thai = document.getElementById('brandThai');
+          thai.textContent = 'ชับดี';
+          thai.className = 'text-[26px] font-semibold';
+        }, hideLogo);
       } else {
         hideLogo();
       }
