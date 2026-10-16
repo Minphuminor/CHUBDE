@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "chubde",
     "public": ".",
     "ignore": ["firebase.json", ".git", ".git/**", "**/.*", "**/.*/**", "**/node_modules/**", "*.log", "*.md"],
     "headers": [
