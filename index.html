@@ -72,7 +72,7 @@
 
     <!-- ส่วนหัว -->
     <header class="px-5 pb-5 pt-6 text-center">
-      <div id="logoWrap" class="mb-3 inline-flex rounded-2xl bg-white p-2" style="display:none">
+      <div id="logoWrap" class="mb-3 inline-flex rounded-2xl bg-white p-2" style="visibility:hidden;height:7rem">
         <img id="brandLogo" alt="โลโก้ CHUBDE (ชับดี)" class="h-24 w-auto max-w-[260px] object-contain"
              referrerpolicy="no-referrer" decoding="async" />
       </div>
@@ -91,22 +91,22 @@
     <section class="mx-5 rounded-2xl bg-white px-5" aria-label="บริการจัดส่งและทดลองขับ">
       <ul class="divide-y divide-ink-line">
         <li class="flex items-center gap-4 py-3">
-          <svg class="h-7 w-7 shrink-0 text-brown-dark" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 16 2 2 4-4"/><path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14"/><path d="m7.5 4.27 9 5.15"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" x2="12" y1="22" y2="12"/></svg>
+          <svg class="h-7 w-7 shrink-0 text-brown" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 16 2 2 4-4"/><path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14"/><path d="m7.5 4.27 9 5.15"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" x2="12" y1="22" y2="12"/></svg>
           <p class="text-[17px] font-semibold">สินค้าพร้อมส่งทั่วประเทศ</p>
         </li>
         <li class="flex items-start gap-4 py-3">
-          <svg class="mt-0.5 h-7 w-7 shrink-0 text-brown-dark" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
+          <svg class="mt-0.5 h-7 w-7 shrink-0 text-brown" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
           <div>
-            <p class="text-[17px] font-semibold">จัดส่งภายใน 1 วัน</p>
-            <p class="text-[16px] text-ink-soft">สั่งตอนเช้า ตอนบ่ายได้สินค้าเลย</p>
-            <p class="mt-1.5 flex items-start gap-1.5 text-[15px] font-medium text-brown-dark">
+            <p class="text-[17px] font-semibold">จัดส่งภายใน 1 วัน <span class="whitespace-nowrap">(4 จังหวัด)</span></p>
+            <p class="mt-0.5 flex items-start gap-1.5 text-[15px] font-medium text-brown-dark">
               <svg class="mt-[3px] h-4 w-4 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-              <span>เฉพาะ<span class="whitespace-nowrap">พังงา</span> <span class="whitespace-nowrap">ภูเก็ต</span> <span class="whitespace-nowrap">กระบี่</span> <span class="whitespace-nowrap">สุราษฎร์ธานี</span></span>
+              <span><span class="whitespace-nowrap">พังงา</span> <span class="whitespace-nowrap">ภูเก็ต</span> <span class="whitespace-nowrap">กระบี่</span> <span class="whitespace-nowrap">สุราษฎร์ธานี</span></span>
             </p>
+            <p class="mt-0.5 text-[16px] text-ink-soft">สั่งตอนเช้า ตอนบ่ายได้สินค้าเลย</p>
           </div>
         </li>
         <li class="flex items-center gap-4 py-3">
-          <svg class="h-7 w-7 shrink-0 text-brown-dark" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          <svg class="h-7 w-7 shrink-0 text-brown" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
           <p class="text-[17px] font-semibold">ทดลองขับฟรี <span class="whitespace-nowrap">ถึงหน้าบ้าน</span></p>
         </li>
       </ul>
@@ -119,7 +119,7 @@
         <svg class="h-8 w-8 shrink-0" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
         <span class="flex-1 leading-tight">
           <span class="block text-[19px] font-semibold">ทักแชท LINE</span>
-          <span class="mt-0.5 block text-[15px]">สอบถามราคา / นัดทดลองขับฟรี</span>
+          <span class="mt-0.5 block text-[15px]"><span class="whitespace-nowrap">สอบถามราคา /</span> <span class="whitespace-nowrap">นัดทดลองขับฟรี</span></span>
         </span>
         <svg class="h-6 w-6 shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
       </a>
@@ -160,11 +160,11 @@
       </div>
 
       <ul class="mt-5 space-y-3 rounded-2xl bg-white p-5 text-[17px] leading-snug">
-        <li class="flex gap-3"><svg class="mt-0.5 h-6 w-6 shrink-0 text-brown-dark" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>เบา พับเก็บใน <span class="whitespace-nowrap">1-3 วินาที</span> ยกมือเดียวใส่<span class="whitespace-nowrap">ท้ายรถเก๋งได้</span></span></li>
-        <li class="flex gap-3"><svg class="mt-0.5 h-6 w-6 shrink-0 text-brown-dark" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>แบต Quick-Release ถอดถือ<span class="whitespace-nowrap">ขึ้นเครื่องบินได้</span> <span class="whitespace-nowrap">ตามมาตรฐานสากล</span></span></li>
-        <li class="flex gap-3"><svg class="mt-0.5 h-6 w-6 shrink-0 text-brown-dark" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>เบรกแม่เหล็กไฟฟ้า ปล่อยมือหยุดทันที <span class="whitespace-nowrap">ปลอดภัยบนทางลาด</span></span></li>
-        <li class="flex gap-3"><svg class="mt-0.5 h-6 w-6 shrink-0 text-brown-dark" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>ทุกคันจูนจอยสติ๊กด้วยคอมพิวเตอร์ <span class="whitespace-nowrap">ก่อนส่งมอบ</span></span></li>
-        <li class="flex gap-3"><svg class="mt-0.5 h-6 w-6 shrink-0 text-brown-dark" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>ประกันโครงสร้าง <span class="whitespace-nowrap">3 ปี</span> มอเตอร์และ<span class="whitespace-nowrap">แบต 1 ปี</span></span></li>
+        <li class="flex gap-3"><svg class="mt-0.5 h-6 w-6 shrink-0 text-brown" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>เบา พับเก็บใน <span class="whitespace-nowrap">1-3 วินาที</span> <span class="whitespace-nowrap">ยกมือเดียว</span>ใส่<span class="whitespace-nowrap">ท้ายรถเก๋งได้</span></span></li>
+        <li class="flex gap-3"><svg class="mt-0.5 h-6 w-6 shrink-0 text-brown" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>แบต Quick-Release ถอดถือ<span class="whitespace-nowrap">ขึ้นเครื่องบินได้</span> <span class="whitespace-nowrap">ตามมาตรฐานสากล</span></span></li>
+        <li class="flex gap-3"><svg class="mt-0.5 h-6 w-6 shrink-0 text-brown" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>เบรกแม่เหล็กไฟฟ้า ปล่อยมือ<span class="whitespace-nowrap">หยุดทันที</span> <span class="whitespace-nowrap">ปลอดภัยบนทางลาด</span></span></li>
+        <li class="flex gap-3"><svg class="mt-0.5 h-6 w-6 shrink-0 text-brown" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>ทุกคันจูนจอยสติ๊กด้วยคอมพิวเตอร์ <span class="whitespace-nowrap">ก่อนส่งมอบ</span></span></li>
+        <li class="flex gap-3"><svg class="mt-0.5 h-6 w-6 shrink-0 text-brown" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>ประกันโครงสร้าง <span class="whitespace-nowrap">3 ปี</span> <span class="whitespace-nowrap">มอเตอร์และแบต 1 ปี</span></span></li>
       </ul>
     </section>
 
@@ -254,14 +254,17 @@
       }
 
       /* ---------- โลโก้ (ถ้าโหลดไม่ได้ จะเหลือชื่อแบรนด์ใน h1) ---------- */
+      // กันพื้นที่โลโก้ไว้ก่อน ปุ่มด้านล่างจะได้ไม่เลื่อนตอนโลโก้โหลดเสร็จ
       var logoId = driveId(config.logo);
+      var logoWrap = document.getElementById('logoWrap');
+      function hideLogo() { logoWrap.style.display = 'none'; }
       if (logoId) {
         loadImage(document.getElementById('brandLogo'), [
           'https://lh3.googleusercontent.com/d/' + logoId,
           'https://drive.google.com/uc?export=view&id=' + logoId
-        ], function () {
-          document.getElementById('logoWrap').style.display = 'inline-flex';
-        });
+        ], function () { logoWrap.style.visibility = 'visible'; }, hideLogo);
+      } else {
+        hideLogo();
       }
 
       /* ---------- ภาพสเปก ---------- */
